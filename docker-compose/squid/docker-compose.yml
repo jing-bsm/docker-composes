@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  squid:
+    build: .
+    ports:
+      - "33128:3128"
+    dns:
+      - 8.8.4.4
+      - 8.8.8.8
+    command: sh -c "squid -N"
